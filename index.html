@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=100% height=100%></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -18,6 +18,11 @@
       </div>
       <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Exhibition 2021</div>
       </div>
     </div>
     <script>
@@ -28,9 +33,9 @@
         frameworkUrl: buildUrl + "/temp.framework.js.unityweb",
         codeUrl: buildUrl + "/temp.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "AnalogKestrel",
+        companyName: "DefaultCompany",
         productName: "Exhibition 2021",
-        productVersion: "2.1",
+        productVersion: "0.1",
       };
 
       var container = document.querySelector("#unity-container");
@@ -58,7 +63,7 @@
         }, 5000);
       } else {
         canvas.style.width = "960px";
-        canvas.style.height = "960px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
